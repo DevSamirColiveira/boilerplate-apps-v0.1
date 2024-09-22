@@ -7,4 +7,6 @@ indent_size = 2
 end_of_line = lf
 charset = utf-8
 trim_trailing_whitespace = true
-insert_final_newline = true
+
+// este comando que você esta digitando e para, ele da uma quebra de linha
+insert_final_newline = false
