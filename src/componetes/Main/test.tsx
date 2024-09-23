@@ -6,10 +6,14 @@ import Main from '.'
 describe('<Main />', () => {
   it('should render the headind', () => {
     // renderiza o component
-    render(<Main />)
+    const { container } = render(<Main />)
+
     // busca o elemento e verofica e existencia dele.
     expect(
-      screen.getByRole('heading', { name: /react avançado/i })
+      screen.getByRole('heading', { name: /React Avançado/i })
     ).toBeInTheDocument()
+
+    //gerar snapshot
+    expect(container.firstChild).toMatchSnapshot()
   })
 })
